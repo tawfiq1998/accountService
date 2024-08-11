@@ -2,15 +2,17 @@ package com.example.digitinary.config;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.springframework.test.context.ActiveProfiles;
 import springfox.documentation.spi.DocumentationType;
 import springfox.documentation.spring.web.plugins.Docket;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
 @SpringBootTest
+@ActiveProfiles("kafka")
 class SpringFoxConfigTest {
     @Test
-    public void testDocketBeanConfiguration() {
+    void testDocketBeanConfiguration() {
         AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(SpringFoxConfig.class);
 
         Docket docket = context.getBean(Docket.class);

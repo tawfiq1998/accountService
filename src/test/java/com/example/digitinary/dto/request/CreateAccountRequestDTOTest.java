@@ -30,7 +30,7 @@ class CreateAccountRequestDTOTest {
         String result = dto.toString();
 
         // Then
-        String expected = "CreateAccountRequestDTO{} AccountRequestDTO(customerUUID=null, accountType=null, balance=null, createdBy=admin, modifiedBy=admin, accountStatus=ACTIVE)";
+        String expected = "CreateAccountRequestDTO{} AccountRequestDTO(customerUUID=null, customerId=null, accountType=null, balance=null, createdBy=admin, modifiedBy=admin, accountStatus=ACTIVE)";
         assertEquals(expected, result);
     }
 
